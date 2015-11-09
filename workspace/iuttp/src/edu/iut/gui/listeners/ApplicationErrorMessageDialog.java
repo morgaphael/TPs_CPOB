@@ -7,7 +7,10 @@ public class ApplicationErrorMessageDialog extends
 
 	@Override
 	protected void showMessage(String level, String message) {
-		/** UTILISER l'AIDE FORUNIR DANS L'ENNONCE */
+		/** UTILISER l'AIDE FORUNIR DANS L'ENNONCE */				
+		//Boîte du message d'erreur
+		JOptionPane jop3 = new JOptionPane();
+		jop3.showMessageDialog(null, "Erreur", message, JOptionPane.ERROR_MESSAGE);
 	}
 
 }
