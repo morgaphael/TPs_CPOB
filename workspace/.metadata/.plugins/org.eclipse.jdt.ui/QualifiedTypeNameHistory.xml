@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="edu.iut.app.IApplicationLogListener"/>
+<fullyQualifiedTypeName name="java.lang.Iterable"/>
+<fullyQualifiedTypeName name="edu.iut.app.IApplicationLog"/>
+<fullyQualifiedTypeName name="edu.iut.app.ApplicationErrorLog"/>
+<fullyQualifiedTypeName name="edu.iut.app.ApplicationWarningLog"/>
+<fullyQualifiedTypeName name="edu.iut.app.ApplicationInfoLog"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+</qualifiedTypeNameHistroy>
