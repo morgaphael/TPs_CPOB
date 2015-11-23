@@ -9,7 +9,6 @@ import edu.iut.app.ApplicationSession;
 
 public class WeekPanel extends EventPanel {
 
-	// Exercice 4
 	public enum WeekDayNames {
 		EMPTYDAY("",""),
 		MONDAY(ApplicationSession.instance().getString("monday"),ApplicationSession.instance().getString("mon")),
@@ -19,7 +18,6 @@ public class WeekPanel extends EventPanel {
 		FRIDAY(ApplicationSession.instance().getString("friday"),ApplicationSession.instance().getString("fri")),
 		SATURDAY(ApplicationSession.instance().getString("saturday"),ApplicationSession.instance().getString("sat")),
 		SUNDAY(ApplicationSession.instance().getString("sunday"),ApplicationSession.instance().getString("sun"));
-		
 		
 		private String name;
 		private String shortName;
