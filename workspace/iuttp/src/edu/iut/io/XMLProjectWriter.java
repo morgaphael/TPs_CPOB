@@ -37,6 +37,7 @@ public class XMLProjectWriter {
 		
 		Document document = builder.newDocument();
 		Element root = document.createElement("agenda");
+		document.appendChild(root);
 
 		for(ExamEvent event : data){
 			Element eventElement = document.createElement("event");
@@ -52,7 +53,7 @@ public class XMLProjectWriter {
 				fillElementFromPerson(el, p);
 				eventElement.appendChild(el);
 			}
-			document.appendChild(eventElement);
+			root.appendChild(eventElement);
 		}
 
 		TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -70,7 +71,7 @@ public class XMLProjectWriter {
 		e.setAttribute("lastname", p.getLastname());
 		e.setAttribute("email", p.getEmail());
 		e.setAttribute("phone", p.getPhone());
-		e.setAttribute("function", p.getFunction().name());
+		e.setAttribute("function", p.getFunction().toString());
 		return e;
 	}
 }
