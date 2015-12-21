@@ -6,7 +6,7 @@ import java.io.File;
 
 public class CommandLineParser {
 	
-	protected HashMap<String, CommandLineOption<?>> options;
+	protected HashMap<String, CommandLineOption<?> > options;
 	protected ArrayList<String> parseErrors;
 		
 	public CommandLineParser() {
@@ -34,44 +34,42 @@ public class CommandLineParser {
 							parseErrors.add("Option should have a key and a value.");
 						}
 						break;
-					/* EX1 : reproduire le comportement de 'case FILE', pour STRING,INTEGER, ... */
 					case STRING:
-						CommandLineOption<String> stringOption = (CommandLineOption<String>) options.get(keyValue[0]);
-						if(keyValue.length == 2 ) {
-							stringOption.setValue(keyValue[1]);
+						CommandLineOption<String> stringOption = (CommandLineOption<String>)options.get(keyValue[0]);
+						if (keyValue.length == 2) {
+							stringOption.setValue(new String(keyValue[1]));
 						}
 						else {
 							parseErrors.add("Option should have a key and a value.");
 						}
 						break;
 					case INTEGER:
-						CommandLineOption<Integer> intOption = (CommandLineOption<Integer>) options.get(keyValue[0]);
-						if(keyValue.length == 2 ) {
-							intOption.setValue(Integer.parseInt(keyValue[1]));
+						CommandLineOption<Integer> integerOption = (CommandLineOption<Integer>)options.get(keyValue[0]);
+						if (keyValue.length == 2) {
+							integerOption.setValue(new Integer(keyValue[1]));
 						}
 						else {
 							parseErrors.add("Option should have a key and a value.");
-						}
+						}						
 						break;
 					case DOUBLE:
-						CommandLineOption<Double> doubleOption = (CommandLineOption<Double>) options.get(keyValue[0]);
-						if(keyValue.length == 2 ) {
-							doubleOption.setValue(Double.parseDouble(keyValue[1]));
+						CommandLineOption<Double> doubleOption = (CommandLineOption<Double>)options.get(keyValue[0]);
+						if (keyValue.length == 2) {
+							doubleOption.setValue(new Double(keyValue[1]));
 						}
 						else {
 							parseErrors.add("Option should have a key and a value.");
 						}
 						break;
-					case BOOLEAN:
-						CommandLineOption<Boolean> boolOption = (CommandLineOption<Boolean>) options.get(keyValue[0]);
-						if(keyValue.length == 2 ) {
-							boolOption.setValue(Boolean.parseBoolean(keyValue[1]));
+					case NOVALUE:
+						CommandLineOption<Boolean> boolOption = (CommandLineOption<Boolean>)options.get(keyValue[0]);
+						if (keyValue.length == 2) {
+							boolOption.setValue(new Boolean(keyValue[1]));
 						}
 						else {
-							parseErrors.add("Option should have a key and a value.");
+							boolOption.setValue(new Boolean(true));
 						}
 						break;
-						
 					default:
 						parseErrors.add("Unrecognize option type.");						
 				}

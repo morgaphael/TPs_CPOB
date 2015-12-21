@@ -5,16 +5,13 @@ public class Classroom {
 	public Classroom() {
 		classRoomNumber="not affected";
 	}
-	
 	public Classroom(String classRoomNumber) {
-		super();
 		this.classRoomNumber = classRoomNumber;
 	}
-
-	public void setClassRoomNumber(String classRoomNumber) {
-		this.classRoomNumber = classRoomNumber;
+	
+	public void setClassroomNumber(String number) {
+		this.classRoomNumber = number;
 	}
-
 	public String getClassRoomNumber() {
 		return classRoomNumber;
 	}

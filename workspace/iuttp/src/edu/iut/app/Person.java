@@ -3,7 +3,6 @@ package edu.iut.app;
 public class Person {
 	
 	public enum PersonFunction{
-		/* EX2 : Internationalisation */
 		NONE("None"),
 		JURY("Jury"),
 		STUDENT("Student");

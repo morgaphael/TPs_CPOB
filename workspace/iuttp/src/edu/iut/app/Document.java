@@ -5,9 +5,7 @@ public class Document {
 	public Document() {
 		documentURI="";
 	}
-	
 	public Document(String documentURI) {
-		super();
 		this.documentURI = documentURI;
 	}
 	

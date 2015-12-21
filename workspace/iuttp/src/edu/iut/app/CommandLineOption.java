@@ -1,6 +1,6 @@
 package edu.iut.app;
 
-public class CommandLineOption <ValueType>{
+public class CommandLineOption<ValueType> {
 	
 	public enum OptionType{
 		NONE("None"),
@@ -8,7 +8,6 @@ public class CommandLineOption <ValueType>{
 		STRING("String"),
 		INTEGER("Integer"),
 		DOUBLE("Double"),
-		BOOLEAN("Boolean"),
 		NOVALUE("NoValue");
 		private String optionType;
 		
@@ -21,18 +20,25 @@ public class CommandLineOption <ValueType>{
 		}		
 	}
 	
-	public CommandLineOption() {
-		this.optionType = OptionType.NOVALUE;
+	public CommandLineOption() {		
+		key = null;
+		description = null;
+		defaultValue = null;
+		value = null;
+		optionType = OptionType.NONE;
 	}
 	public CommandLineOption(final OptionType optionType, final String key, final String description, final ValueType defaultValue) {
-		super();
-		setOption(optionType, key, description, defaultValue);
+		this.key = key;
+		this.description = description;
+		this.defaultValue = defaultValue;
+		this.optionType = optionType;
+		this.value = null;
 	}
 	public void setOption(OptionType optionType, String key, String description, ValueType defaultValue) {
 		this.key = key;
 		this.description = description;
 		this.defaultValue = defaultValue;
-		this.value = defaultValue;
+		this.value = null;
 		this.optionType = optionType;
 	}
 	public  void setValue(ValueType value) {
